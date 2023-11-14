@@ -1,0 +1,38 @@
+model movies driver Neo4j {
+nsuri = "http://movies/1.0" 
+};
+
+context Movie {
+	constraint hasTitle {
+		check : self.`title` <> "" and self.rating > 4 and self.year > 2019
+	}
+	constraint titleSize {
+		check : self.`title`.size() > 2
+	}
+	constraint hasActor {
+		check : self.persons.size() > 0
+	}
+}
+
+context Person {
+	constraint isValidName {
+		check:
+			self.name.length() > 3
+	}
+	constraint hasMovies {
+		check: self.movies.size() > 0
+	}
+	constraint nameMovie {
+		check: self.name <> "" and self.movies.size() > 0
+	}
+}
+
+
+/*
+constraint isNew {
+		check : self.year > 2019
+	}
+	constraint highRated {
+		check : self.rating > 4
+	}
+*/

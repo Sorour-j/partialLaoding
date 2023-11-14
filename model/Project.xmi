@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="psl"
+    xsi:schemaLocation="psl psl.ecore"
+    title="ACME">
+  <tasks xsi:type="ManualTask"
+      title="Design"
+      duration="3"
+      start="1">
+    <effort
+        person="//@people.1"
+        percentage="40"/>
+    <effort
+        person="//@people.0"
+        percentage="60"/>
+  </tasks>
+  <tasks xsi:type="AutomaticTask"
+      title="Meeting organisation"/>
+  <tasks xsi:type="ManualTask"
+      title="Implementation"
+      duration="6"
+      start="7">
+    <effort
+        person="//@people.0"
+        percentage="50"/>
+    <effort
+        person="//@people.1"
+        percentage="50"/>
+  </tasks>
+  <people name="Alice"/>
+  <people name="Bob"/>
+</Project>

@@ -1,0 +1,17 @@
+import "utils.eol";
+
+model movies driver Neo4j {
+nsuri = "movies" 
+};
+
+context Person {
+	constraint isValidName {
+		check:
+			self.name.length() > 3 //and
+		//	self.name.contains(" ") and
+		//	self.name.substring(0,1).matches("[A-Z]")
+	}
+	constraint hasMovies {
+		check: self.movies.size() > 0
+	}
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<componentLanguage:ComponentDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentLanguage="componentLanguage" xmi:id="_5DuawF9PEe2_16N-fByzbA">
+  <components xmi:id="_598AQF9PEe2_16N-fByzbA" name="Component1">
+    <ports xmi:id="_95jhQF9PEe2_16N-fByzbA" name="port11" dataType="String" incoming="_gQF3IF9REe2_16N-fByzbA" components="_598AQF9PEe2_16N-fByzbA"/>
+    <ports xmi:id="_B0tIMF9QEe2_16N-fByzbA" name="port12" dataType="String" type="OUTPUT" outgoing="_dwZXAF9QEe2_16N-fByzbA" components="_598AQF9PEe2_16N-fByzbA"/>
+  </components>
+  <components xmi:id="_7xqnsF9PEe2_16N-fByzbA" name="Component2">
+    <ports xmi:id="_GoY5oF9QEe2_16N-fByzbA" name="port21" dataType="String" incoming="_dwZXAF9QEe2_16N-fByzbA" components="_7xqnsF9PEe2_16N-fByzbA"/>
+    <ports xmi:id="_ICA_AF9QEe2_16N-fByzbA" name="port22" dataType="String" type="OUTPUT" outgoing="_Lwx6UF9REe2_16N-fByzbA" components="_7xqnsF9PEe2_16N-fByzbA"/>
+  </components>
+  <components xmi:id="_8nO9wF9PEe2_16N-fByzbA" name="Component3">
+    <ports xmi:id="_Lw99AF9QEe2_16N-fByzbA" name="port31" dataType="String" incoming="_Lwx6UF9REe2_16N-fByzbA" components="_8nO9wF9PEe2_16N-fByzbA"/>
+    <ports xmi:id="_N9MkAF9QEe2_16N-fByzbA" name="port32" dataType="String" type="OUTPUT" outgoing="_gQF3IF9REe2_16N-fByzbA" components="_8nO9wF9PEe2_16N-fByzbA"/>
+  </components>
+  <connectors xmi:id="_gQF3IF9REe2_16N-fByzbA" name="con31" source="_N9MkAF9QEe2_16N-fByzbA" target="_95jhQF9PEe2_16N-fByzbA"/>
+  <connectors xmi:id="_Lwx6UF9REe2_16N-fByzbA" name="con23" source="_ICA_AF9QEe2_16N-fByzbA" target="_Lw99AF9QEe2_16N-fByzbA"/>
+  <connectors xmi:id="_dwZXAF9QEe2_16N-fByzbA" name="con12" source="_B0tIMF9QEe2_16N-fByzbA" target="_GoY5oF9QEe2_16N-fByzbA"/>
+</componentLanguage:ComponentDiagram>

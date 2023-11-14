@@ -1,0 +1,301 @@
+model crystal driver Neo4j {
+nsuri = "crystal" 
+};
+
+context Subprograms {
+	constraint SubprogramsHasName {
+		check{
+			if(((self.eclass().name ="Function") and not(self.name.isDefined())) or
+			((self.eclass().name ="Procedure") and not(self.name.isDefined()))){
+				return false;
+			}
+			return true;
+		}
+		message : '(CR01) An element of '+self.eclass().name + ' type must have a name, because through the name it is possible make a future reference for this object.'
+		fix {	
+			title : 'Enter the name of ' + self.eClass().name + '.'
+			do {
+				var nome : String;
+				nome = UserInput.prompt('Enter the name:');
+				if (nome.isDefined()) self.name := nome;
+			}
+		}
+	}
+	
+	constraint NameIsValid {
+		guard : self.satisfies('SubprogramsHasName')
+		check : not(("#")->isSubstringOf(self.name)) and not(("-")->isSubstringOf(self.name)) and not(("$")->isSubstringOf(self.name))
+		message : '(CR02) An element of '+self.eclass().name + ' type must have a name started by a letter followed by other letters, numbers or underlines, because an element with special characters can result in a "well-formed" problem since it is can yield grammar conflicts.'
+	}
+	
+	constraint NoSubprogramWithSameName {
+		guard : self.satisfies('SubprogramsHasName')
+		check : not (Subprograms.allInstances.select(e|e.name = self.name)->size() <> 1)
+		message : '(CR03) The Subprograms must have different names, because through the name it is possible make a future reference for these objects.'
+		fix {
+			title : 'Change the name of the Entity.'
+			do {
+				var nome : String;
+				nome = UserInput.prompt('Enter the new name:');
+				if (nome.isDefined()) self.name := nome;
+			}
+		}
+	}
+	
+	constraint HasExecutablePart {
+    	check : not self.executablePart.isEmpty()
+    	message : '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+    }
+    
+    constraint HasAStartElement {
+		guard : self.satisfies('HasExecutablePart')
+		check {
+			for(statement in self.executablePart) {
+				if(statement.isStart){
+					return true;
+				}
+			}
+			return false;
+		}
+		message: '(CR24) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+}
+
+context Function {
+	constraint HasReturn {
+		check { 
+			if(not (self.returnPart.size() > 0)) {
+				return false;
+			}
+			return true;
+		}
+		message : '(CR05) You must have one statemenet at Return Part because it is required for the '+self.eclass().name + '.'
+	}
+
+}
+
+context Parameters {
+	constraint HasCode {
+		check{
+			if(((self.eclass().name =="Collections") and self.code.size() < 0) or
+				((self.eclass().name =="Records" and self.code.size() < 0)) or
+				((self.eclass().name =="Cursor" and self.cursorQuery.size() < 0))){
+				return false;
+			}
+			return true;
+		} 
+		message : '(CR06) The field code of the parameter '+ self.eclass().name +' it is required.'
+	}
+}
+
+context DataType {
+	constraint HasPrecisionAndScale {
+		check{
+			if(not((self.options = DataTypeOptions#NUMBER) or (self.options = DataTypeOptions#NUMERIC) or 
+				(self.options = DataTypeOptions#DEC) or (self.options = DataTypeOptions#DECIMAL)) 
+				and ((self.precision > 1) or (self.scale > 0))){
+				return false;
+			}
+			return true;
+		}
+		message : '(CR07) The fields precision and scale only is applied to the options: NUMBER, NUMERIC, DEC, DECIMAL. For other options, the values are precision = 1 and scale = 0.'
+	}
+}
+
+context Statements {
+	critique HasDescription {
+		check : not self.description.isEmpty()
+		message : '(CR08) The description helps to know the purpose of the statement.'
+	}
+	
+	constraint HasCode {
+		check {
+			if((self.eclass().name = 'Select' or self.eclass().name = 'Insert' or self.eclass().name = 'Exception'
+			 or self.eclass().name = 'Delete' or self.eclass().name = 'Update') and self.code.isEmpty()){
+				return false;
+			}
+			return true;
+		} 
+		message : '(CR09) The field code is required for the statement '+self.eclass().name + '.'
+	}
+	
+	constraint HasExitLoop {
+		check {
+			if(self.eclass().name ='Loop' and self.breakCondition.isEmpty()){
+				return false;
+			}
+			return true;
+		}
+		message : '(CR10) The break condition of the statement ' + self.eclass().name + ' have to be declared.'
+	}
+	
+	constraint HasName {
+		check {
+			if((self.eclass().name = 'CallFunction' or self.eclass().name = 'CallProcedure')
+				and self.nameSubroutine.size() < 0) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR11) The name of the statement ' + self.eclass().name + ' have to be declared.'
+	}
+	
+	constraint ForHasAtLeastOneStatement {
+		check {
+			if(self.eclass().name = 'For' and self.forStatements.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+	}
+	
+	constraint ForHasAStartElement {
+		guard : self.satisfies('ForHasAtLeastOneStatement')
+		check {
+			if(self.eclass().name = 'For') {
+				for(statement in self.forStatements) {
+					if(statement.isStart){
+						return true;
+					}
+				}
+				return false;
+			}
+			return true;
+		}
+		message: '(CR14) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+	
+	constraint LoopHasAtLeastOneStatement {
+		check {
+			if(self.eclass().name = 'Loop' and self.loopStatements.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+	}
+	
+	constraint LoopHasAStartElement {
+		guard : self.satisfies('LoopHasAtLeastOneStatement')
+		check {
+			if(self.eclass().name = 'Loop') {
+				for(statement in self.loopStatements) {
+					if(statement.isStart){
+						return true;
+					}
+				}
+				return false;
+			}
+			return true;
+		}
+		message: '(CR14) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+	
+	constraint WhileHasAtLeastOneStatement {
+		check {
+			if(self.eclass().name = 'While' and self.whileStatements.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.	'
+	}
+	
+	constraint WhileHasAStartElement {
+		guard : self.satisfies('WhileHasAtLeastOneStatement')
+		check {
+			if(self.eclass().name = 'While') {
+				for(statement in self.whileStatements) {
+					if(statement.isStart){
+						return true;
+					}
+				}
+				return false;
+			}
+			return true;
+		}
+		message: '(CR14) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+	
+	constraint StatementsHasConditions {
+		check {
+			if((self.eclass().name = 'While' or self.eclass().name = 'If') and self.condition.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR12) The ' + self.eclass().name + ' statement must have a condition.'
+	}
+	
+	constraint IfHasAtLeastOneStatement {
+		check {
+			if(self.eclass().name = 'If' and self.ifs.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+	}
+	
+	constraint CaseHasAtLeastOneSelector {
+		check {
+			if(self.eclass().name = 'Case' and self.cases.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR13) The ' + self.eclass().name + ' statement must have at least one selector inside it.'
+	}
+	
+	constraint IfHasAStartElement {
+		guard : self.satisfies('IfHasAtLeastOneStatement')
+		check {
+			if(self.eclass().name = 'If') {
+				for(statement in self.ifs) {
+					if(statement.isStart){
+						return true;
+					}
+				}
+				return false;
+			}
+			return true;
+		}
+		message: '(CR14) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+}
+
+context Selector {
+	constraint SelectorHasCondition {
+		check {
+			if(self.eclass().name = 'Selector' and self.condition.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR12) The ' + self.eclass().name + ' statement must have a condition.'
+	}
+	
+	constraint SelectorHasAtLeastStatement {
+		check {
+			if(self.eclass().name = 'Selector' and self.caseStatements.isEmpty()) {
+				return false;
+			}
+			return true;
+		}
+		message: '(CR04) You must have at least one executable statement because these are the statements that the '+self.eclass().name + ' executes when it is called.'
+	}
+	
+	constraint SelectHasAStartElement {
+		guard : self.satisfies('SelectorHasAtLeastStatement')
+		check {
+			for(statement in self.caseStatements) {
+				if(statement.isStart){
+					return true;
+				}
+			}
+			return false;
+		}
+		message: '(CR14) The ' + self.eclass().name + ' statement must have a start element inside it.'
+	}
+}

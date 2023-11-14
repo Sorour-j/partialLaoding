@@ -1,0 +1,15 @@
+model javaMM driver Neo4j {nsuri = "javaMM"};
+
+var i : ImportDeclaration;
+var result : Set;
+
+for (i in ImportDeclaration.all.size().println("IM: ")){
+	var r =  NamedElement.allInstances().size().println("MD: ").exists(ne : NamedElement |
+			ne == i.importedElement and
+			ne.originalCompilationUnit == i.originalCompilationUnit);
+	if (r == false)
+		result.add(r);
+}
+
+var r;
+result.size().println("number of true: ");

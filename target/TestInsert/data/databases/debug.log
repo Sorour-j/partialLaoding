@@ -1,0 +1,13 @@
+2022-07-19 15:54:55.080+0000 INFO  [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:PageAlignedV4_3[AF4.3.0] record format from store /Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/target/TestInsert/data/databases/neo4j
+2022-07-19 15:54:55.081+0000 INFO  [o.n.k.i.s.f.RecordFormatSelector] Format not configured for store /Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/target/TestInsert/data/databases/neo4j. Selected format from the store files: RecordFormat:PageAlignedV4_3[AF4.3.0]
+2022-07-19 15:54:55.087+0000 INFO  [o.n.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[DatabaseLayout{databaseDirectory=/Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/target/TestInsert/data/databases/neo4j, transactionLogsDirectory=/Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/target/TestInsert/data/databases/neo4j}])
+2022-07-19 15:54:55.846+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Index population started: [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )]
+2022-07-19 15:54:55.846+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Index population started: [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )]
+2022-07-19 15:54:55.952+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@1fa4a3b6], concurrentUpdateQueue = 0}
+2022-07-19 15:54:55.952+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Completed relationship store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@30212b2f], concurrentUpdateQueue = 0}
+2022-07-19 15:54:55.996+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Index creation finished for index [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )].
+2022-07-19 15:54:55.996+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] Index creation finished for index [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )].
+2022-07-19 15:54:56.028+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] TIME/PHASE Final: SCAN[totalTime=2ms], FLIP[totalTime=74ms]
+2022-07-19 15:54:56.031+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] TIME/PHASE Final: SCAN[totalTime=3ms], FLIP[totalTime=79ms]

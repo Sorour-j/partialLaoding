@@ -1,0 +1,16 @@
+return ASTNode.allInstances().collect(a | a.getPathName()).size();
+
+operation ASTNode getPathName() : String {
+	var Objects = Native("java.util.Objects");
+	var commentsHash = Objects.toString(Objects.hashCode(self.comments));
+	var compUnit = self.originalCompilationUnit;
+	if (compUnit.isUndefined()) return null;
+	var compUnitPath = compUnit.originalFilePath;
+	var fileName = compUnit.name;
+	var result = commentsHash;
+	if (fileName.isUndefined() or compUnitPath.isUndefined()) return result;
+	result += " # "+commentsHash;
+	var index = compUnitPath.indexOf(fileName);
+	if (index <= 0) return compUnitPath + result;
+	else return compUnitPath.substring(0, index) + result;
+}

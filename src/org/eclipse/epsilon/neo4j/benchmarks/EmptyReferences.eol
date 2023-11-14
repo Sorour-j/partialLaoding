@@ -1,0 +1,14 @@
+model javaMM driver Neo4j {nsuri = "javaMM"};
+
+var result:Sequence;
+
+var b : Block;
+
+//§Block.all.size().println("Block size; ");
+
+for (b in Block.all){
+if (b.statements.notEmpty()){// and b.comments.notEmpty()
+	result.add(true);
+    }
+}
+result.size().println("satisfied : ");

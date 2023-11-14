@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java">
+  <Model name="org.eclipse.core.databinding.beans"/>
+  <Model name="org.eclipse.core.databinding.observable"/>
+  <Model name="org.eclipse.core.databinding"/>
+  <Model name="org.eclipse.e4.core.deeplink.typehandler.extensionpt"/>
+  <Model name="org.eclipse.e4.core.metaconfig.example"/>
+  <Model name="org.eclipse.e4.core.services"/>
+  <Model name="org.eclipse.e4.demo.contacts"/>
+</xmi:XMI>

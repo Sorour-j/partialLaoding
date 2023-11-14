@@ -1,0 +1,25 @@
+model javaMM driver Neo4j {nsuri = "javaMM"};
+
+var result : Sequence;
+
+var cc : CatchClause;
+result.clear();
+for (cc in CatchClause.all){
+if (cc.exception.type.type.name <> "IllegalMonitorStateException"){
+	result.add(false);
+    }
+}
+result.size().println("Size: ");
+
+result.clear();
+
+var ta:TypeAccess;
+for (ta in TypeAccess.all){
+	ta.type.name;
+	result.add(false);
+}
+result.size().println("Size: ");
+
+
+var t:Type;
+Type.all.size().println();

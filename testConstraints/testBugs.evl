@@ -1,0 +1,71 @@
+model javaMM driver Neo4j {nsuri = "http://www.eclipse.org/MoDisco/Java/0.2.incubation/java"};
+
+operation ClassDeclaration getMethods() : Collection <MethodDeclaration> {
+	return self.bodyDeclarations.select(bd :MethodDeclaration |bd.isKindOf(MethodDeclaration));
+}
+
+operation MethodDeclaration isCompareTo() : Boolean {
+	return self.name == "compareTo" and
+		self.parameters.size() == 1 and
+		self.thrownExceptions.isEmpty() and
+		self.returnType.isDefined() and
+		self.returnType.type.isTypeOf(PrimitiveTypeInt) and
+		self.modifier.isDefined() and
+		self.modifier.visibility == VisibilityKind#public;
+}
+operation MethodDeclaration isEquals() : Boolean {
+	return self.name == "equals" and
+		self.parameters.size() == 1 and
+		self.parameters.first().type.type.name == "Object" and
+		self.thrownExceptions.isEmpty() and
+		self.returnType.isDefined() and
+		self.returnType.type.isTypeOf(PrimitiveTypeBoolean) and
+		self.modifier.isDefined() and
+		self.modifier.visibility == VisibilityKind#public;
+}
+
+
+operation OrderedSet<SingleVariableDeclaration> checkType(st:String) : Boolean {
+	var first : SingleVariableDeclaration;
+	if (self.notEmpty()){
+		first = self.first();
+		return first.type.type.isTypeOf(st);
+	}
+	return null;
+}
+
+
+operation MethodDeclaration isClone() : Boolean {
+	return self.name == "clone" and
+		self.parameters.isEmpty() and
+		self.returnType.isDefined() and
+		self.thrownExceptions.size() == 1 and
+		self.thrownExceptions.first().type.name == "CloneNotSupportedException" and
+		self.modifier.isDefined() and
+		self.modifier.visibility == VisibilityKind#public;
+}
+operation ClassDeclaration implements(type : String) {
+	
+	return self.superInterfaces.exists(si:TypeAccess | si.type.name == type);
+}
+
+context ClassDeclaration{
+constraint comparatorImplementsSerializable {
+		guard: self.implements("Comparator")
+		check: self.implements("Serializable")
+	}
+	constraint equalsAndCompareTo {
+		guard: self.getMethods().exists(md | md.isCompareTo())
+		check: self.getMethods().exists(md | md.isEquals())
+	}
+	constraint serialUIDInSerializableClass {
+		guard: self.implements("Serializable")
+		check: self.bodyDeclarations.exists(bd : FieldDeclaration |
+			bd.isKindOf(FieldDeclaration) and
+			bd.name == "serialVersionUID" and
+			bd.modifier.static and
+			bd.modifier.inheritance == InheritanceKind#final and
+			bd.type.type.isTypeOf(PrimitiveTypeLong)
+		)
+	}
+}

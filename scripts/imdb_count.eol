@@ -1,0 +1,42 @@
+model movies driver Neo4j {
+nsuri = "http://movies/1.0" 
+};
+
+Person.allInstances().count(a: Person | a.hasCoupleCoactors()).println("count: ");
+Movie.allInstances().atLeastNMatch(m | m.nestedActors(), getN()).println("match:" );
+
+operation Person hasCoupleCoactors() : Boolean {
+	return self.coactors().exists(co | co.areCoupleCoactors(self));
+}
+
+operation Person coactors() : Set(Person) {
+	return self.movies.collect(m | m.persons).flatten().asSet();
+}
+
+operation Person areCoupleCoactors(co : Person) : Boolean {
+	return
+		self.name.compareTo(co.name) < 0 and
+		co.movies.size() >= 3 and
+		self.areCouple(co);
+}
+
+operation Person areCouple(p : Person) : Boolean {
+	return self.movies.excludingAll(p.movies).size() <= (self.movies.size() - 3);
+}
+
+operation getN() : Integer {
+	return 32;
+}
+operation Movie nestedActors() : Boolean {
+	var actors = Person.allInstances().asSequence();
+	var n = getN();
+	var toIndex = actors.size() / n;
+	var subActors = actors.subList(0, toIndex);
+	return self.persons
+		.exists(ac |
+			subActors.exists(mp |
+				ac.hashCode() == mp.hashCode() and
+				mp.movies.size() == ac.movies.size()
+			)
+		);
+}

@@ -1,0 +1,16 @@
+model movies driver Neo4j {
+nsuri = "http://movies/1.0" 
+};
+
+"Start".println();
+
+var m : Movie;
+var p : Person;
+
+for (m in Movie.allInstances()){
+     m.title.println("Movie Name: ");
+     m.persons.size().println("Size: ");
+    for (p in m.persons)
+	p.name.println("Person Name: ");
+}
+

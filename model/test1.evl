@@ -1,0 +1,20 @@
+model movies driver Neo4j {
+nsuri = "http://movies/1.0" 
+};
+
+context Movie {
+	constraint hasTitle {
+		check : self.`title` <> "" and self.rating > 4
+	}
+}
+
+context Person {
+	constraint isValidName {
+		check:
+			self.name.length() > 3
+	}
+}
+
+
+
+

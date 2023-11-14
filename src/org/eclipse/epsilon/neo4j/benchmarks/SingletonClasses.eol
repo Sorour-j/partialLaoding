@@ -1,0 +1,13 @@
+model javaMM driver Neo4j {
+nsuri = "http://www.eclipse.org/MoDisco/Java/0.2.incubation/java" 
+};
+var method = MethodDeclaration.all. select(m | m.name= ’getInstance’);
+method = method.select(m | ! m. modifier.isEmpty());
+var mod;
+var singletons = new Sequence; for(m in method){
+mod = m.modifier;
+if(mod.static = true and mod. visibility.literal == ’public’){
+var class = m. abstractTypeDeclaration;
+if(m.returnType.type = class) singletons.add(class);
+} }
+for(c in singletons) c.name.println();

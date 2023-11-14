@@ -1,0 +1,30 @@
+model Core driver Neo4j {nsuri = "org.amma.dsl.jdt.core"};
+model DOM driver Neo4j {nsuri = "org.amma.dsl.jdt.dom"};
+model PrimitiveTypes driver Neo4j {nsuri = "org.amma.dsl.jdt.primitiveTypes"};
+
+var matches:Set;
+ 
+matches.addAll(
+	TypeDeclaration.all.collect(td:TypeDeclaration|td.bodyDeclarations.select(
+			     md:MethodDeclaration|
+			     md.modifiers.exists(mod:Modifier|mod.public==true)			     		     and 
+			     md.modifiers.exists(mod:Modifier|mod.static==true)
+			     and
+			     md.returnType.checkName(td)
+			  ))
+.flatten()
+.collect(names:MethodDeclaration|names.returnType.name.fullyQualifiedName)
+);
+
+
+matches.size().println();
+
+operation Type checkName(td : TypeDeclaration) : Boolean{
+if (self.isTypeOf(SimpleType)){
+    var st : SimpleType;
+    st = self;    
+    return (st.name.fullyQualifiedName == td.name.fullyQualifiedName);
+}
+else
+	return false;
+}

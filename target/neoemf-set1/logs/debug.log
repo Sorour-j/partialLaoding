@@ -1,0 +1,486 @@
+2022-04-20 14:11:01.508+0000 WARN  [o.n.k.i.JvmChecker] The max heap memory has not been configured. It is recommended that it is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 4169138176 bytes is used instead. If you are running neo4j server, you need to configure dbms.memory.heap.max_size in neo4j.conf. If you are running neo4j embedded, you have to launch the JVM with -Xmx set to a value. You can run neo4j-admin memrec for memory configuration suggestions.
+2022-04-20 14:11:01.510+0000 WARN  [o.n.k.i.JvmChecker] The initial heap memory has not been configured. It is recommended that it is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 262144000 bytes is used instead. If you are running neo4j server, you need to configure dbms.memory.heap.initial_size in neo4j.conf. If you are running neo4j embedded, you have to launch the JVM with -Xms set to a value. You can run neo4j-admin memrec for memory configuration suggestions.
+2022-04-20 14:11:01.572+0000 WARN  [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6251106304 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2022-04-20 14:11:01.769+0000 INFO  [o.n.i.d.DiagnosticsManager] 
+                                                                ********************************************************************************
+                                                                                             [ System diagnostics ]                             
+                                                                ********************************************************************************
+                                                                --------------------------------------------------------------------------------
+                                                                                         [ System memory information ]                          
+                                                                --------------------------------------------------------------------------------
+                                                                Total Physical memory: 15.53GiB
+                                                                Free Physical memory: 5.437GiB
+                                                                Committed virtual memory: 6.991GiB
+                                                                Total swap space: 976.0MiB
+                                                                Free swap space: 976.0MiB
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                           [ JVM memory information ]                           
+                                                                --------------------------------------------------------------------------------
+                                                                Free  memory: 305.3MiB
+                                                                Total memory: 384.0MiB
+                                                                Max   memory: 3.883GiB
+                                                                Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+                                                                Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+                                                                Memory Pool: CodeHeap 'non-nmethods' (Non-heap memory): committed=2.438MiB, used=1.278MiB, max=5.563MiB, threshold=0B
+                                                                Memory Pool: Metaspace (Non-heap memory): committed=27.55MiB, used=26.71MiB, max=-1B, threshold=0B
+                                                                Memory Pool: CodeHeap 'profiled nmethods' (Non-heap memory): committed=6.875MiB, used=6.844MiB, max=117.2MiB, threshold=0B
+                                                                Memory Pool: Compressed Class Space (Non-heap memory): committed=3.625MiB, used=3.259MiB, max=1.000GiB, threshold=0B
+                                                                Memory Pool: G1 Eden Space (Heap memory): committed=87.00MiB, used=39.00MiB, max=-1B, threshold=?
+                                                                Memory Pool: G1 Old Gen (Heap memory): committed=294.0MiB, used=35.69MiB, max=3.883GiB, threshold=0B
+                                                                Memory Pool: G1 Survivor Space (Heap memory): committed=3.000MiB, used=3.000MiB, max=-1B, threshold=?
+                                                                Memory Pool: CodeHeap 'non-profiled nmethods' (Non-heap memory): committed=2.438MiB, used=1.514MiB, max=117.2MiB, threshold=0B
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                        [ Operating system information ]                        
+                                                                --------------------------------------------------------------------------------
+                                                                Operating System: Linux; version: 5.13.0-35-generic; arch: amd64; cpus: 4
+                                                                Max number of file descriptors: 1048576
+                                                                Number of open file descriptors: 348
+                                                                Process id: 17579
+                                                                Byte order: LITTLE_ENDIAN
+                                                                Local timezone: Europe/London
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                              [ JVM information ]                               
+                                                                --------------------------------------------------------------------------------
+                                                                VM Name: OpenJDK 64-Bit Server VM
+                                                                VM Vendor: Ubuntu
+                                                                VM Version: 11.0.14.1+1-Ubuntu-0ubuntu1.20.04
+                                                                JIT compiler: HotSpot 64-Bit Tiered Compilers
+                                                                VM Arguments: []
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                               [ Java classpath ]                               
+                                                                --------------------------------------------------------------------------------
+                                                                 [classpath] /home/itspassword/Desktop/TestCase/CreateGraph/createGraph.jar
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                                [ Library path ]                                
+                                                                --------------------------------------------------------------------------------
+                                                                /usr/java/packages/lib
+                                                                /usr/lib/x86_64-linux-gnu/jni
+                                                                /usr/lib/x86_64-linux-gnu
+                                                                /usr/lib/x86_64-linux-gnu
+                                                                /usr/lib/jni
+                                                                /usr/lib
+                                                                /usr/lib
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                             [ System properties ]                              
+                                                                --------------------------------------------------------------------------------
+                                                                sun.desktop = gnome
+                                                                awt.toolkit = sun.awt.X11.XToolkit
+                                                                sun.cpu.isalist = 
+                                                                sun.jnu.encoding = UTF-8
+                                                                sun.arch.data.model = 64
+                                                                user.timezone = Europe/London
+                                                                sun.java.launcher = SUN_STANDARD
+                                                                user.country = GB
+                                                                sun.boot.library.path = /usr/lib/jvm/java-11-openjdk-amd64/lib
+                                                                sun.java.command = createGraph.jar Java.ecore models/set1.xmi database/neoemf-set1
+                                                                jdk.debug = release
+                                                                sun.cpu.endian = little
+                                                                user.home = /home/itspassword
+                                                                user.language = en
+                                                                file.separator = /
+                                                                sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+                                                                user.name = itspassword
+                                                                path.separator = :
+                                                                file.encoding = UTF-8
+                                                                jnidispatch.path = /home/itspassword/.cache/JNA/temp/jna1671170333874969148.tmp
+                                                                jna.loaded = true
+                                                                user.dir = /home/itspassword/Desktop/TestCase/CreateGraph
+                                                                sun.os.patch.level = unknown
+                                                                sun.io.unicode.encoding = UnicodeLittle
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                      [ (IANA) TimeZone database version ]                      
+                                                                --------------------------------------------------------------------------------
+                                                                  TimeZone version: 2021e (available for 601 zone identifiers)
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                            [ Network information ]                             
+                                                                --------------------------------------------------------------------------------
+                                                                Interface wlp3s0:
+                                                                    address: fe80:0:0:0:e6fb:809e:68f4:d7ff%wlp3s0
+                                                                    address: 10.240.144.245
+                                                                Interface lo:
+                                                                    address: 0:0:0:0:0:0:0:1%lo
+                                                                    address: 127.0.0.1
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                         [ Native access information ]                          
+                                                                --------------------------------------------------------------------------------
+                                                                Native access details: Linux native access is available.
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                                [ DBMS config ]                                 
+                                                                --------------------------------------------------------------------------------
+                                                                DBMS provided settings:
+                                                                dbms.connector.bolt.enabled=true
+                                                                dbms.connector.bolt.listen_address=localhost:7687
+                                                                dbms.connector.http.enabled=true
+                                                                dbms.directories.neo4j_home=/home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1
+                                                                unsupported.dbms.lucene.ephemeral=false
+                                                                
+2022-04-20 14:11:01.825+0000 INFO  [o.n.d.i.DefaultIdentityModule] Generated new ServerId: ServerId{680d9d86} (680d9d86-3ed1-464b-bb5d-d95d04eac5f9)
+2022-04-20 14:11:01.826+0000 INFO  [o.n.d.i.DefaultIdentityModule] This instance is ServerId{680d9d86} (680d9d86-3ed1-464b-bb5d-d95d04eac5f9)
+2022-04-20 14:11:01.832+0000 INFO  [o.n.g.f.EditionLocksFactories] Locking implementation 'forseti' selected.
+2022-04-20 14:11:03.701+0000 INFO  [o.n.s.CommunityNeoWebServer] ======== Neo4j 4.4.3 ========
+2022-04-20 14:11:03.720+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Creating 'DatabaseId{00000000[system]}'.
+2022-04-20 14:11:03.855+0000 INFO  [o.n.b.BoltServer] Bolt server loaded
+2022-04-20 14:11:03.946+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Starting 'DatabaseId{00000000[system]}'.
+2022-04-20 14:11:04.036+0000 INFO  [o.n.k.i.s.f.RecordFormatSelector] [system/00000000] Selected format 'RecordFormat:PageAlignedV4_3[AF4.3.0]' for the new store /home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/databases/system
+2022-04-20 14:11:04.801+0000 INFO  [o.n.i.d.DiagnosticsManager] [system/00000000] 
+                                                                [system/00000000] ********************************************************************************
+                                                                [system/00000000]                               [ Database: system ]                              
+                                                                [system/00000000] ********************************************************************************
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                                   [ Version ]                                   
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] DBMS: community single StoreId{creationTime=1650463864597, randomId=-3719576028298539810, storeVersion=3471768636287762695, upgradeTime=1650463864597, upgradeTxId=1}
+                                                                [system/00000000] Kernel version: 4.4.3
+                                                                [system/00000000] 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                                 [ Store files ]                                 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] Disk space on partition (Total / Free / Free %): 248618848256 / 224910815232 / 90
+                                                                [system/00000000] Storage files stored on file store: ext4
+                                                                [system/00000000] Storage files: (filename : modification date - size)
+                                                                [system/00000000]   neostore: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.counts.db: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.labeltokenstore.db: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.labeltokenstore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.labeltokenstore.db.names: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.labeltokenstore.db.names.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.nodestore.db: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.nodestore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.nodestore.db.labels: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.nodestore.db.labels.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.propertystore.db: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.propertystore.db.arrays: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.propertystore.db.arrays.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.propertystore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.propertystore.db.index: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.propertystore.db.index.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.propertystore.db.index.keys: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.propertystore.db.index.keys.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.propertystore.db.strings: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.propertystore.db.strings.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.relationshipgroupstore.db: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.relationshipgroupstore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.relationshipgroupstore.degrees.db: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.relationshipstore.db: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.relationshipstore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.relationshiptypestore.db: 2022-04-20T15:11:04+01:00 - 0B
+                                                                [system/00000000]   neostore.relationshiptypestore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.relationshiptypestore.db.names: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.relationshiptypestore.db.names.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000]   neostore.schemastore.db: 2022-04-20T15:11:04+01:00 - 8.000KiB
+                                                                [system/00000000]   neostore.schemastore.db.id: 2022-04-20T15:11:04+01:00 - 40.00KiB
+                                                                [system/00000000] Storage summary: 
+                                                                [system/00000000]   Total size of store: 712.0KiB
+                                                                [system/00000000]   Total size of mapped files: 72.00KiB
+                                                                [system/00000000] 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                               [ Transaction log ]                               
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] Transaction log files stored on file store: ext4
+                                                                [system/00000000] Transaction log files:
+                                                                [system/00000000]  - existing transaction log versions -1--1
+                                                                [system/00000000]  - no transactions found
+                                                                [system/00000000] Checkpoint log files:
+                                                                [system/00000000]  - existing checkpoint log versions -1--1
+                                                                [system/00000000]  - no checkpoints found
+                                                                [system/00000000] 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                                   [ Id usage ]                                  
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] ArrayPropertyStore[neostore.nodestore.db.labels]: used=1 high=0
+                                                                [system/00000000] NodeStore[neostore.nodestore.db]: used=0 high=-1
+                                                                [system/00000000] StringPropertyStore[neostore.propertystore.db.index.keys]: used=1 high=0
+                                                                [system/00000000] PropertyIndexStore[neostore.propertystore.db.index]: used=0 high=-1
+                                                                [system/00000000] StringPropertyStore[neostore.propertystore.db.strings]: used=1 high=0
+                                                                [system/00000000] ArrayPropertyStore[neostore.propertystore.db.arrays]: used=1 high=0
+                                                                [system/00000000] PropertyStore[neostore.propertystore.db]: used=0 high=-1
+                                                                [system/00000000] RelationshipStore[neostore.relationshipstore.db]: used=0 high=-1
+                                                                [system/00000000] StringPropertyStore[neostore.relationshiptypestore.db.names]: used=1 high=0
+                                                                [system/00000000] RelationshipTypeStore[neostore.relationshiptypestore.db]: used=0 high=-1
+                                                                [system/00000000] StringPropertyStore[neostore.labeltokenstore.db.names]: used=1 high=0
+                                                                [system/00000000] LabelTokenStore[neostore.labeltokenstore.db]: used=0 high=-1
+                                                                [system/00000000] SchemaStore[neostore.schemastore.db]: used=1 high=0
+                                                                [system/00000000] RelationshipGroupStore[neostore.relationshipgroupstore.db]: used=1 high=0
+                                                                [system/00000000] NeoStore[neostore]: used=-1 high=-1
+                                                                [system/00000000] 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                               [ Neostore records ]                              
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] TIME (Creation time): 1650463864597
+                                                                [system/00000000] RANDOM_NUMBER (Random number for store id): -3719576028298539810
+                                                                [system/00000000] LOG_VERSION (Current log version): 0
+                                                                [system/00000000] LAST_TRANSACTION_ID (Last committed transaction): 1
+                                                                [system/00000000] STORE_VERSION (Store format version): 3471768636287762695 (AF4.3.0)
+                                                                [system/00000000] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+                                                                [system/00000000] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 0
+                                                                [system/00000000] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+                                                                [system/00000000] UPGRADE_TIME (Time of last upgrade): 1650463864597
+                                                                [system/00000000] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -559063315
+                                                                [system/00000000] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): -559063315
+                                                                [system/00000000] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+                                                                [system/00000000] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 64
+                                                                [system/00000000] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 0
+                                                                [system/00000000] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+                                                                [system/00000000] LAST_MISSING_STORE_FILES_RECOVERY_TIMESTAMP (Timestamp of last attempt to perform a recovery on the store with missing files.): -1
+                                                                [system/00000000] EXTERNAL_STORE_UUID_MOST_SIGN_BITS (Database identifier exposed as external store identity. Generated on creation and never updated. Most significant bits.): 1294782817693548749
+                                                                [system/00000000] EXTERNAL_STORE_UUID_LEAST_SIGN_BITS (Database identifier exposed as external store identity. Generated on creation and never updated. Least significant bits): -8542983854930933203
+                                                                [system/00000000] CHECKPOINT_LOG_VERSION (Current checkpoint log version): 0
+                                                                [system/00000000] KERNEL_VERSION (The kernel version (also transaction log version) that is currently being used when writing new transactions): 4
+                                                                [system/00000000] DATABASE_ID_MOST_SIGN_BITS (The last used DatabaseId for this database. Most significant bits): -9223372036854775808
+                                                                [system/00000000] DATABASE_ID_LEAST_SIGN_BITS (The last used DatabaseId for this database. Least significant bits): -9223372036854775808
+                                                                [system/00000000] 
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000]                                [ Store versions ]                               
+                                                                [system/00000000] --------------------------------------------------------------------------------
+                                                                [system/00000000] ArrayPropertyStore[neostore.nodestore.db.labels] AF4.3.0
+                                                                [system/00000000] NodeStore[neostore.nodestore.db] AF4.3.0
+                                                                [system/00000000] StringPropertyStore[neostore.propertystore.db.index.keys] AF4.3.0
+                                                                [system/00000000] PropertyIndexStore[neostore.propertystore.db.index] AF4.3.0
+                                                                [system/00000000] StringPropertyStore[neostore.propertystore.db.strings] AF4.3.0
+                                                                [system/00000000] ArrayPropertyStore[neostore.propertystore.db.arrays] AF4.3.0
+                                                                [system/00000000] PropertyStore[neostore.propertystore.db] AF4.3.0
+                                                                [system/00000000] RelationshipStore[neostore.relationshipstore.db] AF4.3.0
+                                                                [system/00000000] StringPropertyStore[neostore.relationshiptypestore.db.names] AF4.3.0
+                                                                [system/00000000] RelationshipTypeStore[neostore.relationshiptypestore.db] AF4.3.0
+                                                                [system/00000000] StringPropertyStore[neostore.labeltokenstore.db.names] AF4.3.0
+                                                                [system/00000000] LabelTokenStore[neostore.labeltokenstore.db] AF4.3.0
+                                                                [system/00000000] SchemaStore[neostore.schemastore.db] AF4.3.0
+                                                                [system/00000000] RelationshipGroupStore[neostore.relationshipgroupstore.db] AF4.3.0
+                                                                [system/00000000] NeoStore[neostore] AF4.3.0
+                                                                [system/00000000] 
+2022-04-20 14:11:04.824+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] Requirement `Database unavailable` makes database system unavailable.
+2022-04-20 14:11:04.825+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] DatabaseId{00000000[system]} is unavailable.
+2022-04-20 14:11:04.889+0000 WARN  [o.n.k.i.s.MetaDataStore] [system/00000000] Missing counts store, rebuilding it.
+2022-04-20 14:11:04.895+0000 WARN  [o.n.k.i.s.MetaDataStore] [system/00000000] Counts store rebuild completed.
+2022-04-20 14:11:04.905+0000 INFO  [o.n.k.d.Database] [system/00000000] Starting transaction log [/home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/transactions/system/neostore.transaction.db.0] at version=0
+2022-04-20 14:11:04.913+0000 INFO  [o.n.k.d.Database] [system/00000000] Starting transaction log [/home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/transactions/system/checkpoint.0] at version=0
+2022-04-20 14:11:04.973+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] Fulfilling of requirement 'Database unavailable' makes database system available.
+2022-04-20 14:11:04.974+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] DatabaseId{00000000[system]} is ready.
+2022-04-20 14:11:04.978+0000 INFO  [o.n.m.DatabaseHealth] [system/00000000] Database health set to OK
+2022-04-20 14:11:05.430+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index population started: [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )]
+2022-04-20 14:11:05.496+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@69a294d8], concurrentUpdateQueue = 0}
+2022-04-20 14:11:05.503+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index creation finished for index [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )].
+2022-04-20 14:11:05.510+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] TIME/PHASE Final: SCAN[totalTime=0ns], FLIP[totalTime=11ms]
+2022-04-20 14:11:05.511+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index population started: [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )]
+2022-04-20 14:11:05.539+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Completed relationship store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@5020e5ab], concurrentUpdateQueue = 0}
+2022-04-20 14:11:05.543+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index creation finished for index [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )].
+2022-04-20 14:11:05.544+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] TIME/PHASE Final: SCAN[totalTime=0ns], FLIP[totalTime=4ms]
+2022-04-20 14:11:05.575+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Starting constraint creation: Constraint( name='constraint_375161cd', type='UNIQUENESS', schema=(:DatabaseName {name}) ).
+2022-04-20 14:11:05.617+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index population started: [Index( id=3, name='constraint_375161cd', type='UNIQUE BTREE', schema=(:DatabaseName {name}), indexProvider='native-btree-1.0' )]
+2022-04-20 14:11:05.649+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@17f8cad6], concurrentUpdateQueue = 0}
+2022-04-20 14:11:05.659+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index creation finished for index [Index( id=3, name='constraint_375161cd', type='UNIQUE BTREE', schema=(:DatabaseName {name}), indexProvider='native-btree-1.0' )].
+2022-04-20 14:11:05.663+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] TIME/PHASE Final: SCAN[totalTime=0ns], MERGE[totalTime=0ns], BUILD[totalTime=1ms], APPLY_EXTERNAL[totalTime=5ms], FLIP[totalTime=8ms]
+2022-04-20 14:11:05.664+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_375161cd', type='UNIQUENESS', schema=(:DatabaseName {name}) ) populated, starting verification.
+2022-04-20 14:11:05.665+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_375161cd', type='UNIQUENESS', schema=(:DatabaseName {name}) ) verified.
+2022-04-20 14:11:05.670+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Starting constraint creation: Constraint( name='constraint_42eb0b7c', type='UNIQUENESS', schema=(:Database {name}) ).
+2022-04-20 14:11:05.677+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index population started: [Index( id=4, name='constraint_42eb0b7c', type='UNIQUE BTREE', schema=(:Database {name}), indexProvider='native-btree-1.0' )]
+2022-04-20 14:11:05.704+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@768e40af], concurrentUpdateQueue = 0}
+2022-04-20 14:11:05.709+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index creation finished for index [Index( id=4, name='constraint_42eb0b7c', type='UNIQUE BTREE', schema=(:Database {name}), indexProvider='native-btree-1.0' )].
+2022-04-20 14:11:05.711+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] TIME/PHASE Final: SCAN[totalTime=0ns], MERGE[totalTime=0ns], BUILD[totalTime=0ns], APPLY_EXTERNAL[totalTime=2ms], FLIP[totalTime=5ms]
+2022-04-20 14:11:05.725+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_42eb0b7c', type='UNIQUENESS', schema=(:Database {name}) ) populated, starting verification.
+2022-04-20 14:11:05.726+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_42eb0b7c', type='UNIQUENESS', schema=(:Database {name}) ) verified.
+2022-04-20 14:11:05.743+0000 INFO  [o.n.k.i.a.i.IndexingService] [system/00000000] Constraint Index( id=3, name='constraint_375161cd', type='UNIQUE BTREE', schema=(:Label[0] {PropertyKey[10]}), indexProvider='native-btree-1.0' ) is ONLINE.
+2022-04-20 14:11:05.744+0000 INFO  [o.n.k.i.a.i.IndexingService] [system/00000000] Constraint Index( id=4, name='constraint_42eb0b7c', type='UNIQUE BTREE', schema=(:Label[1] {PropertyKey[10]}), indexProvider='native-btree-1.0' ) is ONLINE.
+2022-04-20 14:11:05.969+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Starting constraint creation: Constraint( name='constraint_e31771aa', type='UNIQUENESS', schema=(:User {name}) ).
+2022-04-20 14:11:05.977+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index population started: [Index( id=7, name='constraint_e31771aa', type='UNIQUE BTREE', schema=(:User {name}), indexProvider='native-btree-1.0' )]
+2022-04-20 14:11:06.004+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@156b06e2], concurrentUpdateQueue = 0}
+2022-04-20 14:11:06.010+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] Index creation finished for index [Index( id=7, name='constraint_e31771aa', type='UNIQUE BTREE', schema=(:User {name}), indexProvider='native-btree-1.0' )].
+2022-04-20 14:11:06.012+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [system/00000000] TIME/PHASE Final: SCAN[totalTime=0ns], MERGE[totalTime=0ns], BUILD[totalTime=0ns], APPLY_EXTERNAL[totalTime=2ms], FLIP[totalTime=5ms]
+2022-04-20 14:11:06.013+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_e31771aa', type='UNIQUENESS', schema=(:User {name}) ) populated, starting verification.
+2022-04-20 14:11:06.013+0000 INFO  [o.n.k.i.a.s.ConstraintIndexCreator] [system/00000000] Constraint Constraint( name='constraint_e31771aa', type='UNIQUENESS', schema=(:User {name}) ) verified.
+2022-04-20 14:11:06.019+0000 INFO  [o.n.k.i.a.i.IndexingService] [system/00000000] Constraint Index( id=7, name='constraint_e31771aa', type='UNIQUE BTREE', schema=(:Label[3] {PropertyKey[10]}), indexProvider='native-btree-1.0' ) is ONLINE.
+2022-04-20 14:11:06.021+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] Initializing system graph model for component 'security-users' with version -1 and status UNINITIALIZED
+2022-04-20 14:11:06.027+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] Setting up initial user from defaults: neo4j
+2022-04-20 14:11:06.028+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] Creating new user 'neo4j' (passwordChangeRequired=true, suspended=false)
+2022-04-20 14:11:06.043+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] Setting version for 'security-users' to 3
+2022-04-20 14:11:06.047+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] After initialization of system graph model component 'security-users' have version 3 and status CURRENT
+2022-04-20 14:11:06.051+0000 INFO  [o.n.s.s.s.UserSecurityGraphComponent] Performing postInitialization step for component 'security-users' with version 3 and status CURRENT
+2022-04-20 14:11:06.057+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Creating 'DatabaseId{68b8d815[neo4j]}'.
+2022-04-20 14:11:06.060+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Starting 'DatabaseId{68b8d815[neo4j]}'.
+2022-04-20 14:11:06.063+0000 INFO  [o.n.k.i.s.f.RecordFormatSelector] [neo4j/68b8d815] Selected format 'RecordFormat:PageAlignedV4_3[AF4.3.0]' for the new store /home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/databases/neo4j
+2022-04-20 14:11:06.230+0000 INFO  [o.n.i.d.DiagnosticsManager] [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] ********************************************************************************
+                                                                [neo4j/68b8d815]                               [ Database: neo4j ]                               
+                                                                [neo4j/68b8d815] ********************************************************************************
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                                   [ Version ]                                   
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] DBMS: community single StoreId{creationTime=1650463866203, randomId=4717054043086645254, storeVersion=3471768636287762695, upgradeTime=1650463866203, upgradeTxId=1}
+                                                                [neo4j/68b8d815] Kernel version: 4.4.3
+                                                                [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                                 [ Store files ]                                 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] Disk space on partition (Total / Free / Free %): 248618848256 / 224647598080 / 90
+                                                                [neo4j/68b8d815] Storage files stored on file store: ext4
+                                                                [neo4j/68b8d815] Storage files: (filename : modification date - size)
+                                                                [neo4j/68b8d815]   neostore: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.counts.db: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.labeltokenstore.db: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.labeltokenstore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.labeltokenstore.db.names: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.labeltokenstore.db.names.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.nodestore.db: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.nodestore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.nodestore.db.labels: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.nodestore.db.labels.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.arrays: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.arrays.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.index: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.index.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.index.keys: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.index.keys.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.strings: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.propertystore.db.strings.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.relationshipgroupstore.db: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.relationshipgroupstore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.relationshipgroupstore.degrees.db: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.relationshipstore.db: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.relationshipstore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.relationshiptypestore.db: 2022-04-20T15:11:06+01:00 - 0B
+                                                                [neo4j/68b8d815]   neostore.relationshiptypestore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.relationshiptypestore.db.names: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.relationshiptypestore.db.names.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815]   neostore.schemastore.db: 2022-04-20T15:11:06+01:00 - 8.000KiB
+                                                                [neo4j/68b8d815]   neostore.schemastore.db.id: 2022-04-20T15:11:06+01:00 - 40.00KiB
+                                                                [neo4j/68b8d815] Storage summary: 
+                                                                [neo4j/68b8d815]   Total size of store: 712.0KiB
+                                                                [neo4j/68b8d815]   Total size of mapped files: 72.00KiB
+                                                                [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                               [ Transaction log ]                               
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] Transaction log files stored on file store: ext4
+                                                                [neo4j/68b8d815] Transaction log files:
+                                                                [neo4j/68b8d815]  - existing transaction log versions -1--1
+                                                                [neo4j/68b8d815]  - no transactions found
+                                                                [neo4j/68b8d815] Checkpoint log files:
+                                                                [neo4j/68b8d815]  - existing checkpoint log versions -1--1
+                                                                [neo4j/68b8d815]  - no checkpoints found
+                                                                [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                                   [ Id usage ]                                  
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] ArrayPropertyStore[neostore.nodestore.db.labels]: used=1 high=0
+                                                                [neo4j/68b8d815] NodeStore[neostore.nodestore.db]: used=0 high=-1
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.propertystore.db.index.keys]: used=1 high=0
+                                                                [neo4j/68b8d815] PropertyIndexStore[neostore.propertystore.db.index]: used=0 high=-1
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.propertystore.db.strings]: used=1 high=0
+                                                                [neo4j/68b8d815] ArrayPropertyStore[neostore.propertystore.db.arrays]: used=1 high=0
+                                                                [neo4j/68b8d815] PropertyStore[neostore.propertystore.db]: used=0 high=-1
+                                                                [neo4j/68b8d815] RelationshipStore[neostore.relationshipstore.db]: used=0 high=-1
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.relationshiptypestore.db.names]: used=1 high=0
+                                                                [neo4j/68b8d815] RelationshipTypeStore[neostore.relationshiptypestore.db]: used=0 high=-1
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.labeltokenstore.db.names]: used=1 high=0
+                                                                [neo4j/68b8d815] LabelTokenStore[neostore.labeltokenstore.db]: used=0 high=-1
+                                                                [neo4j/68b8d815] SchemaStore[neostore.schemastore.db]: used=1 high=0
+                                                                [neo4j/68b8d815] RelationshipGroupStore[neostore.relationshipgroupstore.db]: used=1 high=0
+                                                                [neo4j/68b8d815] NeoStore[neostore]: used=-1 high=-1
+                                                                [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                               [ Neostore records ]                              
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] TIME (Creation time): 1650463866203
+                                                                [neo4j/68b8d815] RANDOM_NUMBER (Random number for store id): 4717054043086645254
+                                                                [neo4j/68b8d815] LOG_VERSION (Current log version): 0
+                                                                [neo4j/68b8d815] LAST_TRANSACTION_ID (Last committed transaction): 1
+                                                                [neo4j/68b8d815] STORE_VERSION (Store format version): 3471768636287762695 (AF4.3.0)
+                                                                [neo4j/68b8d815] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+                                                                [neo4j/68b8d815] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 0
+                                                                [neo4j/68b8d815] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+                                                                [neo4j/68b8d815] UPGRADE_TIME (Time of last upgrade): 1650463866203
+                                                                [neo4j/68b8d815] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -559063315
+                                                                [neo4j/68b8d815] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): -559063315
+                                                                [neo4j/68b8d815] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+                                                                [neo4j/68b8d815] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 64
+                                                                [neo4j/68b8d815] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 0
+                                                                [neo4j/68b8d815] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+                                                                [neo4j/68b8d815] LAST_MISSING_STORE_FILES_RECOVERY_TIMESTAMP (Timestamp of last attempt to perform a recovery on the store with missing files.): -1
+                                                                [neo4j/68b8d815] EXTERNAL_STORE_UUID_MOST_SIGN_BITS (Database identifier exposed as external store identity. Generated on creation and never updated. Most significant bits.): 4961015705270698215
+                                                                [neo4j/68b8d815] EXTERNAL_STORE_UUID_LEAST_SIGN_BITS (Database identifier exposed as external store identity. Generated on creation and never updated. Least significant bits): -8598787064388863265
+                                                                [neo4j/68b8d815] CHECKPOINT_LOG_VERSION (Current checkpoint log version): 0
+                                                                [neo4j/68b8d815] KERNEL_VERSION (The kernel version (also transaction log version) that is currently being used when writing new transactions): 4
+                                                                [neo4j/68b8d815] DATABASE_ID_MOST_SIGN_BITS (The last used DatabaseId for this database. Most significant bits): -9223372036854775808
+                                                                [neo4j/68b8d815] DATABASE_ID_LEAST_SIGN_BITS (The last used DatabaseId for this database. Least significant bits): -9223372036854775808
+                                                                [neo4j/68b8d815] 
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815]                                [ Store versions ]                               
+                                                                [neo4j/68b8d815] --------------------------------------------------------------------------------
+                                                                [neo4j/68b8d815] ArrayPropertyStore[neostore.nodestore.db.labels] AF4.3.0
+                                                                [neo4j/68b8d815] NodeStore[neostore.nodestore.db] AF4.3.0
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.propertystore.db.index.keys] AF4.3.0
+                                                                [neo4j/68b8d815] PropertyIndexStore[neostore.propertystore.db.index] AF4.3.0
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.propertystore.db.strings] AF4.3.0
+                                                                [neo4j/68b8d815] ArrayPropertyStore[neostore.propertystore.db.arrays] AF4.3.0
+                                                                [neo4j/68b8d815] PropertyStore[neostore.propertystore.db] AF4.3.0
+                                                                [neo4j/68b8d815] RelationshipStore[neostore.relationshipstore.db] AF4.3.0
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.relationshiptypestore.db.names] AF4.3.0
+                                                                [neo4j/68b8d815] RelationshipTypeStore[neostore.relationshiptypestore.db] AF4.3.0
+                                                                [neo4j/68b8d815] StringPropertyStore[neostore.labeltokenstore.db.names] AF4.3.0
+                                                                [neo4j/68b8d815] LabelTokenStore[neostore.labeltokenstore.db] AF4.3.0
+                                                                [neo4j/68b8d815] SchemaStore[neostore.schemastore.db] AF4.3.0
+                                                                [neo4j/68b8d815] RelationshipGroupStore[neostore.relationshipgroupstore.db] AF4.3.0
+                                                                [neo4j/68b8d815] NeoStore[neostore] AF4.3.0
+                                                                [neo4j/68b8d815] 
+2022-04-20 14:11:06.236+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] Requirement `Database unavailable` makes database neo4j unavailable.
+2022-04-20 14:11:06.236+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] DatabaseId{68b8d815[neo4j]} is unavailable.
+2022-04-20 14:11:06.270+0000 WARN  [o.n.k.i.s.MetaDataStore] [neo4j/68b8d815] Missing counts store, rebuilding it.
+2022-04-20 14:11:06.270+0000 WARN  [o.n.k.i.s.MetaDataStore] [neo4j/68b8d815] Counts store rebuild completed.
+2022-04-20 14:11:06.273+0000 INFO  [o.n.k.d.Database] [neo4j/68b8d815] Starting transaction log [/home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/transactions/neo4j/neostore.transaction.db.0] at version=0
+2022-04-20 14:11:06.276+0000 INFO  [o.n.k.d.Database] [neo4j/68b8d815] Starting transaction log [/home/itspassword/Desktop/TestCase/CreateGraph/database/neoemf-set1/data/transactions/neo4j/checkpoint.0] at version=0
+2022-04-20 14:11:06.277+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] Fulfilling of requirement 'Database unavailable' makes database neo4j available.
+2022-04-20 14:11:06.278+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] DatabaseId{68b8d815[neo4j]} is ready.
+2022-04-20 14:11:06.278+0000 INFO  [o.n.m.DatabaseHealth] [neo4j/68b8d815] Database health set to OK
+2022-04-20 14:11:06.293+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Index population started: [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )]
+2022-04-20 14:11:06.324+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Completed node store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@14b4d90b], concurrentUpdateQueue = 0}
+2022-04-20 14:11:06.329+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Index creation finished for index [Index( id=1, name='index_343aff4e', type='TOKEN LOOKUP', schema=(:<any-labels>), indexProvider='token-lookup-1.0' )].
+2022-04-20 14:11:06.332+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] TIME/PHASE Final: SCAN[totalTime=0ns], FLIP[totalTime=8ms]
+2022-04-20 14:11:06.334+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Index population started: [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )]
+2022-04-20 14:11:06.355+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Completed relationship store scan. Flushing all pending updates.
+MultipleIndexPopulator{activeTasks=0, batchedUpdatesFromScan = [org.neo4j.kernel.impl.api.index.MultipleIndexPopulator$IndexPopulation@1d9bd4d6], concurrentUpdateQueue = 0}
+2022-04-20 14:11:06.360+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] Index creation finished for index [Index( id=2, name='index_f7700477', type='TOKEN LOOKUP', schema=-[:<any-types>]-, indexProvider='token-lookup-1.0' )].
+2022-04-20 14:11:06.364+0000 INFO  [o.n.k.i.a.i.IndexPopulationJob] [neo4j/68b8d815] TIME/PHASE Final: SCAN[totalTime=0ns], FLIP[totalTime=8ms]
+2022-04-20 14:11:06.430+0000 INFO  [o.n.b.BoltServer] Bolt enabled on localhost:7687.
+2022-04-20 14:11:06.431+0000 INFO  [o.n.s.AbstractNeoWebServer$ServerComponentsLifecycleAdapter] Starting web server
+2022-04-20 14:11:07.401+0000 INFO  [o.n.s.CommunityNeoWebServer] Remote interface available at http://localhost:7474/
+2022-04-20 14:11:07.401+0000 INFO  [o.n.s.AbstractNeoWebServer$ServerComponentsLifecycleAdapter] Web server started.
+2022-04-20 14:11:07.416+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] id: C0F3A2A6D28554678360A230602B633BACAED097E49768AA313DD023AC0BAFB6
+2022-04-20 14:11:07.417+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] name: system
+2022-04-20 14:11:07.417+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] creationDate: 2022-04-20T14:11:04.597Z
+2022-04-20 14:11:08.378+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] Shutdown started
+2022-04-20 14:11:08.405+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Stopping 'DatabaseId{68b8d815[neo4j]}'.
+2022-04-20 14:11:08.406+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] Requirement `Database unavailable` makes database neo4j unavailable.
+2022-04-20 14:11:08.407+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [neo4j/68b8d815] DatabaseId{68b8d815[neo4j]} is unavailable.
+2022-04-20 14:11:08.409+0000 INFO  [o.n.k.d.Database] [neo4j/68b8d815] Waiting for closing transactions.
+2022-04-20 14:11:08.412+0000 INFO  [o.n.k.d.Database] [neo4j/68b8d815] All transactions are closed.
+2022-04-20 14:11:08.417+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j/68b8d815] Checkpoint triggered by "Database shutdown" @ txId: 128 checkpoint started...
+2022-04-20 14:11:08.520+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j/68b8d815] Checkpoint triggered by "Database shutdown" @ txId: 128 checkpoint completed in 100ms
+2022-04-20 14:11:08.527+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] [neo4j/68b8d815] No log version pruned. The strategy used was '7 days'. 
+2022-04-20 14:11:08.558+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Stopped 'DatabaseId{68b8d815[neo4j]}' successfully.
+2022-04-20 14:11:08.559+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Stopping 'DatabaseId{00000000[system]}'.
+2022-04-20 14:11:08.559+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] Requirement `Database unavailable` makes database system unavailable.
+2022-04-20 14:11:08.559+0000 INFO  [o.n.k.a.DatabaseAvailabilityGuard] [system/00000000] DatabaseId{00000000[system]} is unavailable.
+2022-04-20 14:11:08.560+0000 INFO  [o.n.k.d.Database] [system/00000000] Waiting for closing transactions.
+2022-04-20 14:11:08.560+0000 INFO  [o.n.k.d.Database] [system/00000000] All transactions are closed.
+2022-04-20 14:11:08.560+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [system/00000000] Checkpoint triggered by "Database shutdown" @ txId: 36 checkpoint started...
+2022-04-20 14:11:08.654+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [system/00000000] Checkpoint triggered by "Database shutdown" @ txId: 36 checkpoint completed in 93ms
+2022-04-20 14:11:08.655+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] [system/00000000] No log version pruned. The strategy used was '7 days'. 
+2022-04-20 14:11:08.693+0000 INFO  [o.n.d.d.DefaultDatabaseManager] Stopped 'DatabaseId{00000000[system]}' successfully.

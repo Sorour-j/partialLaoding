@@ -1,0 +1,508 @@
+2022-03-01 11:43:54.586+0000 WARN  [o.n.k.i.JvmChecker] The max heap memory has not been configured. It is recommended that it is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 4294967296 bytes is used instead. If you are running neo4j server, you need to configure dbms.memory.heap.max_size in neo4j.conf. If you are running neo4j embedded, you have to launch the JVM with -Xmx set to a value. You can run neo4j-admin memrec for memory configuration suggestions.
+2022-03-01 11:43:54.587+0000 WARN  [o.n.k.i.JvmChecker] The initial heap memory has not been configured. It is recommended that it is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 268435456 bytes is used instead. If you are running neo4j server, you need to configure dbms.memory.heap.initial_size in neo4j.conf. If you are running neo4j embedded, you have to launch the JVM with -Xms set to a value. You can run neo4j-admin memrec for memory configuration suggestions.
+2022-03-01 11:43:54.632+0000 WARN  [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6442450944 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2022-03-01 11:43:54.942+0000 INFO  [o.n.i.d.DiagnosticsManager] 
+                                                                ********************************************************************************
+                                                                                             [ System diagnostics ]                             
+                                                                ********************************************************************************
+                                                                --------------------------------------------------------------------------------
+                                                                                         [ System memory information ]                          
+                                                                --------------------------------------------------------------------------------
+                                                                Total Physical memory: 16.00GiB
+                                                                Free Physical memory: 4.913GiB
+                                                                Committed virtual memory: 9.864GiB
+                                                                Total swap space: 0B
+                                                                Free swap space: 0B
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                           [ JVM memory information ]                           
+                                                                --------------------------------------------------------------------------------
+                                                                Free  memory: 138.9MiB
+                                                                Total memory: 308.0MiB
+                                                                Max   memory: 4.000GiB
+                                                                Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+                                                                Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+                                                                Memory Pool: CodeHeap 'non-nmethods' (Non-heap memory): committed=2.438MiB, used=1.184MiB, max=5.566MiB, threshold=0B
+                                                                Memory Pool: Metaspace (Non-heap memory): committed=35.00MiB, used=34.23MiB, max=-1B, threshold=0B
+                                                                Memory Pool: CodeHeap 'profiled nmethods' (Non-heap memory): committed=6.375MiB, used=6.332MiB, max=117.2MiB, threshold=0B
+                                                                Memory Pool: Compressed Class Space (Non-heap memory): committed=4.324MiB, used=3.952MiB, max=1.000GiB, threshold=0B
+                                                                Memory Pool: G1 Eden Space (Heap memory): committed=192.0MiB, used=142.0MiB, max=-1B, threshold=?
+                                                                Memory Pool: G1 Old Gen (Heap memory): committed=114.0MiB, used=23.61MiB, max=4.000GiB, threshold=0B
+                                                                Memory Pool: G1 Survivor Space (Heap memory): committed=2.000MiB, used=2.000MiB, max=-1B, threshold=?
+                                                                Memory Pool: CodeHeap 'non-profiled nmethods' (Non-heap memory): committed=2.438MiB, used=1.684MiB, max=117.2MiB, threshold=0B
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                        [ Operating system information ]                        
+                                                                --------------------------------------------------------------------------------
+                                                                Operating System: Mac OS X; version: 10.15.2; arch: x86_64; cpus: 8
+                                                                Max number of file descriptors: 10240
+                                                                Number of open file descriptors: 345
+                                                                Process id: 826
+                                                                Byte order: LITTLE_ENDIAN
+                                                                Local timezone: Europe/London
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                              [ JVM information ]                               
+                                                                --------------------------------------------------------------------------------
+                                                                VM Name: Java HotSpot(TM) 64-Bit Server VM
+                                                                VM Vendor: Oracle Corporation
+                                                                VM Version: 11.0.10+8-LTS-162
+                                                                JIT compiler: HotSpot 64-Bit Tiered Compilers
+                                                                VM Arguments: [-Dfile.encoding=UTF-8]
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                               [ Java classpath ]                               
+                                                                --------------------------------------------------------------------------------
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/osgi/osgi.core/8.0.0/osgi.core-8.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-storage-engine-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jakarta.annotation-api-1.3.5.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-cypher-compiler-2.1/2.1.8/neo4j-cypher-compiler-2.1-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-expression-evaluator-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-compress-1.21.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.debug.ui_3.14.500.v20200520-0842.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-lock-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-planner-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/commons/commons-core/1.1.0/commons-core-1.1.0-tests.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xmi/2.16.0/org.eclipse.emf.ecore.xmi-2.16.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-analytics/2.20.2/chronicle-analytics-2.20.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/annotations-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-handler-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.workbench.texteditor_3.14.200.v20200421-1954.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-ast-factory-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/lucene-core-8.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/txw2-2.3.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-procedure-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/epsilon/epsilon-core/1.5.1/epsilon-core-1.5.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jettison-1.4.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/neoemf/neoemf-data-blueprints-core/2.1.0-SNAPSHOT/neoemf-data-blueprints-core-2.1.0-SNAPSHOT-tests.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/google/guava/guava/23.6-jre/guava-23.6-jre.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-beanutils-1.9.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-cypher-compiler-1.9/2.0.3/neo4j-cypher-compiler-1.9-2.0.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.junit_4.13.0.v20200204-1500.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/StaticAnalyser/org.eclipse.epsilon.etl.staticanalyser/bin
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.ide_3.17.100.v20200530-0835.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-servlet-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.common/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/hk2-utils-2.6.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/parboiled/parboiled-scala_2.10/1.1.6/parboiled-scala_2.10-1.1.6.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-text-1.9.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.antlr.runtime_3.5.2.v20200724-1452.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/emc-jdbc/org.eclipse.epsilon.emc.jdbc.mysql/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-kernel-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-graphdb-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-server-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-config-core-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-bolt-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-crypto-hash-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.jobs_3.10.800.v20200421-0950.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/mapdb/target/test-classes
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/sun/istack/istack-commons-runtime/4.0.0/istack-commons-runtime-4.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/javax.servlet-api-3.1.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-cypher/2.1.8/neo4j-cypher-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-common-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jakarta.validation-api-2.0.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.0/jakarta.xml.bind-api-3.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-cache-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-databind-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-io/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-core-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/javax.ws.rs-api-2.1.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-core-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.14.1/log4j-1.2-api-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-ast-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-wal-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/EmbeddedNeo4j/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/parboiled-core-1.2.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-values/2.21ea40/chronicle-values-2.21ea40.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-webapp-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.e4.ui.workbench3_0.15.400.v20191216-0805.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/mapdb/elsa/3.0.0-M5/elsa-3.0.0-M5.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-command-line-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/fr/inria/atlanmod/neoemf/neoemf-utils.p2/2.0.0/neoemf-utils.p2-2.0.0-repackaged.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/blueprints/core/target/test-classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-dbms-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-transport-native-epoll-4.1.69.Final-linux-aarch_64.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-kernel-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jPowerShell-3.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-parser-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/emc-jdbc/org.eclipse.epsilon.emc.jdbc.mysql.dependencies/mysql-connector-java-5.1.18-bin.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/mapdb/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf_2.8.0.v20180706-1146.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-bytes/2.21ea43/chronicle-bytes-2.21ea43.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/FastInfoset-1.2.16.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-resolver-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/lucene-backward-codecs-8.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/neoemf/neoemf-core/2.1.0-SNAPSHOT/neoemf-core-2.1.0-SNAPSHOT-tests.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-java-driver-4.3.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-unsafe-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.8/jackson-core-2.8.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-capabilities-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-schema-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-exceptions-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/javassist-3.25.0-GA.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.emc.emf/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-buffers-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/emf/org.eclipse.emf.common/2.23.0/org.eclipse.emf.common-2.23.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-annotations-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/squareup/javapoet/1.12.1/javapoet-1.12.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.swt_3.114.100.v20200604-0951.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/Intelligent-partitioning/org.eclipse.epsilon.partialloading/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.ecore.xmi_2.16.0.v20190528-0725.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/googlecode/concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.3.1/concurrentlinkedhashmap-lru-1.3.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-logical-plans-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-transport-native-epoll-4.1.69.Final-linux-x86_64.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-jul/2.14.1/log4j-jul-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.ecore_2.22.0.v20200519-1135.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-fulltext-index-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/picocli-4.6.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/slf4j-api-1.7.30.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jakarta.inject-2.6.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/scala-library-2.12.13.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.common_3.12.0.v20200504-1602.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/collections/eclipse-collections-api/11.0.0/eclipse-collections-api-11.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.resources_3.13.700.v20200209-1624.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.osgi_3.15.300.v20200520-1959.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/zstd-jni-1.5.0-4.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/slf4j-nop-1.7.30.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.swt.cocoa.macosx.x86_64_3.114.100.v20200604-0951.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/checkerframework/checker-qual/3.18.0/checker-qual-3.18.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/bcprov-jdk15on-1.69.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.evl.engine/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/zstd-proxy-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.runtime_3.18.0.v20200506-2143.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-cypher-commons/2.1.8/neo4j-cypher-commons-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-record-storage-engine-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jamm-0.3.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-io-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-resource-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.debug.core_3.15.100.v20200514-0816.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-batch-insert-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-primitive-collections/2.1.8/neo4j-primitive-collections-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-diagnostics-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.erl.engine/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-procedure-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jProcesses-1.6.5.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/tinkerpop/blueprints/blueprints-neo4j2-graph/2.6.0/blueprints-neo4j2-graph-2.6.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-io-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.etl.engine/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-crypto-core-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/blueprints/core/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-rewriting-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.2.71/kotlin-stdlib-common-1.2.71.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-wire/2.21ea40/chronicle-wire-2.21ea40.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/server-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-common-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-map/3.21ea41/chronicle-map-3.21ea41.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-configuration-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-logging-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-collections-3.2.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-server-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/compiler/2.21ea1/compiler-2.21ea1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/parboiled-scala_2.12-1.2.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/StaticAnalyser/org.eclipse.epsilon.evl.staticanalyser/bin
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-core/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.emc.emf.virtual/bin
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xcore.lib/1.5.0/org.eclipse.emf.ecore.xcore.lib-1.5.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.workbench_3.119.0.v20200521-1247.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-expressions-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-util-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.eol.dt/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-logging-1.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/blueprints/neo4j/target/test-classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-ir-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-security-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.profiling/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/org.eclipse.emf.ecore-2.25.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-id-generator-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-container-servlet-core-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/glassfish/jaxb/jaxb-core/3.0.0/jaxb-core-3.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.text_3.10.200.v20200428-0633.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.region_1.4.600.v20191002-1632.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/jetbrains/annotations/19.0.0/annotations-19.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-monitoring-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/cypher-ast-factory-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/eclipse-collections-api-10.4.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.2.71/kotlin-stdlib-1.2.71.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/collections/eclipse-collections-forkjoin/11.0.0/eclipse-collections-forkjoin-11.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/codehaus/jettison/jettison/1.3.3/jettison-1.3.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/commons/commons-core/1.1.0/commons-core-1.1.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/stax-ex-1.8.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-spatial-index-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/assertj/assertj-core/3.21.0/assertj-core-3.21.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.e4.ui.ide_3.15.100.v20200323-2111.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jna-5.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-transport-native-unix-common-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-concurrent-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-interpreted-runtime-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.views_3.10.300.v20200311-1018.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/mapdb/mapdb/3.0.8/mapdb-3.0.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.equinox.preferences/3.9.100/org.eclipse.equinox.preferences-3.9.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.e4.ui.css.swt.theme_0.12.700.v20200527-0719.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.emc.emf.dt/bin
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/WMI4Java-1.6.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/hk2-locator-2.6.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-lang-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-security-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-macros-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jakarta.activation-api-1.2.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/reactive-streams-1.0.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-config-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/hk2-api-2.6.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.equinox.app/1.6.100/org.eclipse.equinox.app-1.6.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-index-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-xml-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-core/2.21ea42/chronicle-core-2.21ea42.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/glassfish/jaxb/txw2/3.0.0/txw2-3.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.commands_3.9.700.v20191217-1850.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-browser-4.4.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-values-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-ssl-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/emc-jdbc/org.eclipse.epsilon.emc.jdbc/bin
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-io/target/test-classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/eclipse-collections-10.4.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/reactive-streams-1.0.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/chronicle-algorithms/2.21ea40/chronicle-algorithms-2.21ea40.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-data-collector-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-graph-algo-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/xtext/org.eclipse.xtext.xbase.lib/2.26.0.M2/org.eclipse.xtext.xbase.lib-2.26.0.M2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.core.runtime/3.24.0/org.eclipse.core.runtime-3.24.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.25.0/org.eclipse.emf.ecore-2.25.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.osgi.compatibility.state_1.1.800.v20200511-1223.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.preferences_3.8.0.v20200422-1833.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.14.1/log4j-slf4j-impl-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/cglib/cglib-nodep/3.3.0/cglib-nodep-3.3.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-fabric-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/magnolia_2.12-0.17.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.equinox.registry/3.11.100/org.eclipse.equinox.registry-3.11.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-jaxrs-base-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/org.eclipse.emf.common-2.23.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/com.google.inject_3.0.0.v201605172100.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-transport-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.ecore.change_2.14.0.v20190528-0725.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/lucene/lucene-core/3.6.2/lucene-core-3.6.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-push-to-cloud-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-module-jaxb-annotations-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/carrotsearch/hppc/0.6.0/hppc-0.6.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jakarta.ws.rs-api-2.1.6.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.console_3.9.200.v20200511-1122.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-cypher-compiler-2.0/2.0.3/neo4j-cypher-compiler-2.0-2.0.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-consistency-check-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.4.0/org.osgi.service.component.annotations-1.4.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/scala-reflect-2.12.13.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-data/blueprints/neo4j/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.app_1.4.500.v20200422-1833.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-runtime-util-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jctools-core-3.3.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-codec-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-http-9.4.43.v20210629.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.osgi/3.17.100/org.eclipse.osgi-3.17.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.common.dt/bin
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/google/errorprone/error_prone_annotations/2.9.0/error_prone_annotations-2.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-crypto-cipher-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/caffeine-3.0.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-lang3-3.12.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-lucene-index/2.1.8/neo4j-lucene-index-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.emf.dt/bin
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.common_2.19.0.v20200324-0932.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-front-end-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-codegen-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.contenttype_3.7.700.v20200517-1644.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.core.contenttype/3.8.100/org.eclipse.core.contenttype-3.8.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/StaticAnalyser/org.eclipse.epsilon.eol.staticanalyser/target/classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-event-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-util-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-storage-engine-util-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.core.jobs/3.12.0/org.eclipse.core.jobs-3.12.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/logging/log4j/log4j-jcl/2.14.1/log4j-jcl-2.14.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.transforms.hook_1.2.500.v20190714-1852.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-planner-spi-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-graph-algo/2.1.8/neo4j-graph-algo-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-client-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.emf.compare_3.5.3.201911051515.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-token-api-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/bin
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-graph-matching/2.1.8/neo4j-graph-matching-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.filebuffers_3.6.1000.v20200409-1035.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-collections-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-buffer-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/glassfish/jaxb/jaxb-runtime/3.0.0/jaxb-runtime-3.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui_3.117.0.v20200518-1705.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-csv-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/openhft/zero-allocation-hashing/0.15/zero-allocation-hashing-0.15.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/mercator_2.12-0.2.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-hk2-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.0.4/caffeine-3.0.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jaxb-runtime-2.3.2.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/mockito/mockito-core/3.6.0/mockito-core-3.6.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.weaving.hook_1.2.700.v20200422-1833.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.core.variables_3.4.800.v20200120-1101.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/bcutil-jdk15on-1.69.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jaxb-api-2.3.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-import-tool-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jackson-jaxrs-json-provider-2.12.4.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/neoemf/neoemf-data-blueprints-core/2.1.0-SNAPSHOT/neoemf-data-blueprints-core-2.1.0-SNAPSHOT.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/tinkerpop/blueprints/blueprints-core/2.6.0/blueprints-core-2.6.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/lucene-queryparser-8.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-container-servlet-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/bcpkix-jdk15on-1.69.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/neoemf/neoemf-io/2.1.0-SNAPSHOT/neoemf-io-2.1.0-SNAPSHOT.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-native-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.xsd_2.17.0.v20200319-1246.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/platform/org.eclipse.equinox.common/3.15.100/org.eclipse.equinox.common-3.15.100.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.registry_3.8.800.v20200406-0956.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-layout-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/NeoEMFPartialLoading/NeoEMF/neoemf-core/target/test-classes
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-import-util-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/epsilon/plugins/org.eclipse.epsilon.eol.engine/bin
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.jface.text_3.16.300.v20200526-0811.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/atlanmod/neoemf/neoemf-core/2.1.0-SNAPSHOT/neoemf-core-2.1.0-SNAPSHOT.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/de/ruedigermoeller/fst/2.57/fst-2.57.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/netty-codec-http-4.1.69.Final.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/org.eclipse.emf.ecore.xmi-2.16.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jersey-common-2.34.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.ui.editors_3.13.200.v20200501-2307.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-lucene-index-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/com/sun/activation/jakarta.activation/2.0.0/jakarta.activation-2.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/lucene-analyzers-common-8.9.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/neo4j/neo4j-kernel/2.1.8/neo4j-kernel-2.1.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/.m2/repository/org/eclipse/collections/eclipse-collections/11.0.0/eclipse-collections-11.0.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/istack-commons-runtime-3.0.8.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/reactor-core-3.4.11.jar
+                                                                 [classpath] /Users/sorourjahanbin/git/mainandstaticanalysis/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.jface_3.20.0.v20200505-1952.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/commons-io-2.11.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/shiro-config-ogdl-1.8.0.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/neo4j-cypher-javacc-parser-4.4.3.jar
+                                                                 [classpath] /Users/sorourjahanbin/Downloads/neo4j-community-4.4.3/lib/jetty-server-9.4.43.v20210629.jar
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                                [ Library path ]                                
+                                                                --------------------------------------------------------------------------------
+                                                                /Users/sorourjahanbin/Library/Java/Extensions
+                                                                /Library/Java/Extensions
+                                                                /Network/Library/Java/Extensions
+                                                                /System/Library/Java/Extensions
+                                                                /usr/lib/java
+                                                                /Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                             [ System properties ]                              
+                                                                --------------------------------------------------------------------------------
+                                                                gopherProxySet = false
+                                                                awt.toolkit = sun.lwawt.macosx.LWCToolkit
+                                                                sun.cpu.isalist = 
+                                                                sun.jnu.encoding = UTF-8
+                                                                sun.arch.data.model = 64
+                                                                user.timezone = Europe/London
+                                                                sun.java.launcher = SUN_STANDARD
+                                                                user.country = GB
+                                                                sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home/lib
+                                                                sun.java.command = org.eclipse.epsilon.neo4j.dataset.JavaEmbeddedNeo4j
+                                                                http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+                                                                jdk.debug = release
+                                                                sun.cpu.endian = little
+                                                                user.home = /Users/sorourjahanbin
+                                                                user.language = en
+                                                                file.separator = /
+                                                                sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+                                                                ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+                                                                user.name = sorourjahanbin
+                                                                path.separator = :
+                                                                file.encoding = UTF-8
+                                                                jnidispatch.path = /Users/sorourjahanbin/Library/Caches/JNA/temp/jna18290198133939127395.tmp
+                                                                jna.loaded = true
+                                                                user.dir = /Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j
+                                                                sun.os.patch.level = unknown
+                                                                sun.io.unicode.encoding = UnicodeBig
+                                                                socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                      [ (IANA) TimeZone database version ]                      
+                                                                --------------------------------------------------------------------------------
+                                                                  TimeZone version: 2020d (available for 600 zone identifiers)
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                            [ Network information ]                             
+                                                                --------------------------------------------------------------------------------
+                                                                Interface utun1:
+                                                                    address: fe80:0:0:0:cd40:7168:1077:2ea9%utun1
+                                                                Interface utun0:
+                                                                    address: fe80:0:0:0:f6db:f849:fde8:7a06%utun0
+                                                                Interface llw0:
+                                                                    address: fe80:0:0:0:18f5:5ff:fe03:330e%llw0
+                                                                Interface awdl0:
+                                                                    address: fe80:0:0:0:18f5:5ff:fe03:330e%awdl0
+                                                                Interface en5:
+                                                                    address: fe80:0:0:0:aede:48ff:fe00:1122%en5
+                                                                Interface en0:
+                                                                    address: fe80:0:0:0:cbe:4ea3:6693:ef36%en0
+                                                                    address: 192.168.0.15
+                                                                Interface lo0:
+                                                                    address: fe80:0:0:0:0:0:0:1%lo0
+                                                                    address: 0:0:0:0:0:0:0:1%lo0
+                                                                    address: 127.0.0.1
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                         [ Native access information ]                          
+                                                                --------------------------------------------------------------------------------
+                                                                Native access details: Native access is not available for current platform.
+                                                                
+                                                                --------------------------------------------------------------------------------
+                                                                                                [ DBMS config ]                                 
+                                                                --------------------------------------------------------------------------------
+                                                                DBMS provided settings:
+                                                                dbms.connector.bolt.enabled=true
+                                                                dbms.connector.bolt.listen_address=localhost:7687
+                                                                dbms.connector.http.enabled=true
+                                                                dbms.directories.neo4j_home=/Users/sorourjahanbin/git/mainandstaticanalysis/org.eclipse.epsilon.neo4j/target/JavaDB_Test
+                                                                unsupported.dbms.lucene.ephemeral=false
+                                                                
+2022-03-01 11:43:54.996+0000 INFO  [o.n.d.i.DefaultIdentityModule] Generated new ServerId: ServerId{4884d67b} (4884d67b-2032-43af-aae8-160395ed77d4)
+2022-03-01 11:43:54.996+0000 INFO  [o.n.d.i.DefaultIdentityModule] This instance is ServerId{4884d67b} (4884d67b-2032-43af-aae8-160395ed77d4)
+2022-03-01 11:43:55.001+0000 INFO  [o.n.g.f.EditionLocksFactories] Locking implementation 'forseti' selected.

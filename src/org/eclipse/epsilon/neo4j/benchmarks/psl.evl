@@ -1,0 +1,19 @@
+model psl driver Neo4j {
+nsuri = "psl" 
+};
+
+context ManualTask {
+	constraint hasTitle {
+		check: self.`title` <> ""
+	}
+
+	constraint hasEffort {
+		check: self.start > 0
+	}
+}
+
+context Person {
+	constraint hasName {
+		check: self.name  <> ""
+	}
+}

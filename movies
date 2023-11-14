@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:movies="http://movies/1.0">
+  <movies:Actor movies="/1" name="&quot;Comer, Jamie&quot;"/>
+  <movies:Movie persons="/0 /2" title="&quot;#&quot;"/>
+  <movies:Actor movies="/1" name="&quot;Pell, Roxie&quot;"/>
+  <movies:Actor movies="/4" name="&quot;Simpson, Robert (XIII)&quot;"/>
+  <movies:Movie persons="/3 /5 /6" title="&quot;#2&quot;"/>
+  <movies:Actor movies="/4" name="&quot;Stair, Foster&quot;"/>
+  <movies:Actor movies="/4" name="&quot;Simmons, Paul (V)&quot;"/>
+  <movies:Actor movies="/8" name="&quot;Tran, Peter (I)&quot;"/>
+  <movies:Movie persons="/7" title="&quot;#Beauty Nail Salon&quot;"/>
+  <movies:Actor movies="/10" name="&quot;Paige, Skyla&quot;"/>
+  <movies:Movie persons="/9 /11" title="&quot;#Cheerleader Camp&quot;"/>
+  <movies:Actor movies="/10" name="&quot;Powers, Sandra&quot;"/>
+</xmi:XMI>

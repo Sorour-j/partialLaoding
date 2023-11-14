@@ -1,0 +1,23 @@
+model movies driver Neo4j {
+nsuri = "movies" 
+};
+
+"Start".println();
+
+var act: Actor;
+var m :Movie;
+var result : Sequence;
+
+for (act in Actor.allInstances()){
+	for (m in act.movies){
+    	    result.add(m.title);
+	}
+}
+result.size().println("Size");
+result.clear();
+
+for (m in Movie.all)
+    result.add(m.title);
+
+
+result.size().println("Size");
