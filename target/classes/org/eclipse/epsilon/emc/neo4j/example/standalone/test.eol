@@ -1,0 +1,9 @@
+model javaMM driver Neo4j {
+nsuri = "http://www.eclipse.org/MoDisco/Java/0.2.incubation/java" 
+};
+
+var m : Model;
+
+for (m in Model.all()){
+	m.name.println();
+}
